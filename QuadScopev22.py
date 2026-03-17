@@ -141,8 +141,8 @@ class QuadrantInteractor:
 
         # list of (ax, kind, artist) where kind ∈ {"line", "scatter"}
         self._items = []
-        self._xhair = {}    # ax -> (vline, hline)
-        self._ann = {}      # ax -> annotation
+        self._xhair = {}  # ax -> (vline, hline)
+        self._ann = {}  # ax -> annotation
 
         # Create/attach UI elements
         for ax in self.axes:
@@ -331,7 +331,6 @@ class QuadrantInteractor:
         self.canvas.draw_idle()
 
 
-
 # 1 lbf-in = 0.112984829... N·m
 LBIN_TO_NM = 0.1129848290276167
 
@@ -347,46 +346,46 @@ MOOG_MILLING_KTTR_LBIN_PER_ARMS = 4.7335  # Kt at 25°C (phase Arms) from the sh
 # Continuous table (max speed 11424.2 rpm)
 MOOG_MILLING_CONT = [
     # rpm, visc_drag_lbf_in, torque_out_lbf_in, current_arms, power_kw
-    (0.0,     0.000, 24.825, 5.53, 0.000),
-    (250.0,   0.003, 24.714, 5.53, 0.073),
-    (500.0,   0.007, 24.648, 5.52, 0.146),
-    (750.0,   0.010, 24.583, 5.51, 0.218),
-    (1000.0,  0.014, 24.517, 5.51, 0.290),
-    (1250.0,  0.017, 24.449, 5.50, 0.362),
-    (1500.0,  0.020, 24.379, 5.49, 0.433),
-    (1750.0,  0.024, 24.306, 5.47, 0.503),
-    (2000.0,  0.027, 24.230, 5.46, 0.573),
-    (2250.0,  0.030, 24.152, 5.45, 0.643),
-    (2500.0,  0.034, 24.071, 5.44, 0.712),
-    (2750.0,  0.037, 23.988, 5.42, 0.780),
-    (3000.0,  0.041, 23.901, 5.41, 0.848),
-    (3250.0,  0.044, 23.813, 5.39, 0.916),
-    (3500.0,  0.047, 23.722, 5.37, 0.982),
-    (3750.0,  0.051, 23.628, 5.36, 1.048),
-    (4000.0,  0.054, 23.531, 5.34, 1.114),
-    (4250.0,  0.057, 23.433, 5.32, 1.178),
-    (4500.0,  0.061, 23.331, 5.30, 1.242),
-    (4750.0,  0.064, 23.228, 5.28, 1.305),
-    (5000.0,  0.068, 23.121, 5.26, 1.368),
-    (5250.0,  0.071, 23.013, 5.24, 1.429),
-    (5500.0,  0.074, 22.902, 5.22, 1.490),
-    (5750.0,  0.078, 22.788, 5.19, 1.550),
-    (6000.0,  0.081, 22.672, 5.17, 1.610),
-    (6250.0,  0.085, 22.554, 5.15, 1.668),
-    (6500.0,  0.088, 22.433, 5.12, 1.725),
-    (6750.0,  0.091, 22.310, 5.10, 1.782),
-    (7000.0,  0.095, 22.184, 5.07, 1.837),
-    (7250.0,  0.098, 22.056, 5.05, 1.892),
-    (7500.0,  0.101, 21.925, 5.02, 1.946),
-    (7750.0,  0.105, 21.792, 4.99, 1.998),
-    (8000.0,  0.108, 21.656, 4.97, 2.050),
-    (8250.0,  0.112, 21.518, 4.94, 2.100),
-    (8500.0,  0.115, 21.377, 4.91, 2.150),
-    (8750.0,  0.118, 21.234, 4.88, 2.198),
-    (9000.0,  0.122, 21.088, 4.85, 2.246),
-    (9250.0,  0.125, 20.939, 4.82, 2.292),
-    (9500.0,  0.129, 20.788, 4.79, 2.337),
-    (9750.0,  0.132, 20.634, 4.76, 2.380),
+    (0.0, 0.000, 24.825, 5.53, 0.000),
+    (250.0, 0.003, 24.714, 5.53, 0.073),
+    (500.0, 0.007, 24.648, 5.52, 0.146),
+    (750.0, 0.010, 24.583, 5.51, 0.218),
+    (1000.0, 0.014, 24.517, 5.51, 0.290),
+    (1250.0, 0.017, 24.449, 5.50, 0.362),
+    (1500.0, 0.020, 24.379, 5.49, 0.433),
+    (1750.0, 0.024, 24.306, 5.47, 0.503),
+    (2000.0, 0.027, 24.230, 5.46, 0.573),
+    (2250.0, 0.030, 24.152, 5.45, 0.643),
+    (2500.0, 0.034, 24.071, 5.44, 0.712),
+    (2750.0, 0.037, 23.988, 5.42, 0.780),
+    (3000.0, 0.041, 23.901, 5.41, 0.848),
+    (3250.0, 0.044, 23.813, 5.39, 0.916),
+    (3500.0, 0.047, 23.722, 5.37, 0.982),
+    (3750.0, 0.051, 23.628, 5.36, 1.048),
+    (4000.0, 0.054, 23.531, 5.34, 1.114),
+    (4250.0, 0.057, 23.433, 5.32, 1.178),
+    (4500.0, 0.061, 23.331, 5.30, 1.242),
+    (4750.0, 0.064, 23.228, 5.28, 1.305),
+    (5000.0, 0.068, 23.121, 5.26, 1.368),
+    (5250.0, 0.071, 23.013, 5.24, 1.429),
+    (5500.0, 0.074, 22.902, 5.22, 1.490),
+    (5750.0, 0.078, 22.788, 5.19, 1.550),
+    (6000.0, 0.081, 22.672, 5.17, 1.610),
+    (6250.0, 0.085, 22.554, 5.15, 1.668),
+    (6500.0, 0.088, 22.433, 5.12, 1.725),
+    (6750.0, 0.091, 22.310, 5.10, 1.782),
+    (7000.0, 0.095, 22.184, 5.07, 1.837),
+    (7250.0, 0.098, 22.056, 5.05, 1.892),
+    (7500.0, 0.101, 21.925, 5.02, 1.946),
+    (7750.0, 0.105, 21.792, 4.99, 1.998),
+    (8000.0, 0.108, 21.656, 4.97, 2.050),
+    (8250.0, 0.112, 21.518, 4.94, 2.100),
+    (8500.0, 0.115, 21.377, 4.91, 2.150),
+    (8750.0, 0.118, 21.234, 4.88, 2.198),
+    (9000.0, 0.122, 21.088, 4.85, 2.246),
+    (9250.0, 0.125, 20.939, 4.82, 2.292),
+    (9500.0, 0.129, 20.788, 4.79, 2.337),
+    (9750.0, 0.132, 20.634, 4.76, 2.380),
     (10000.0, 0.135, 20.477, 4.72, 2.423),
     (10250.0, 0.139, 20.318, 4.69, 2.464),
     (10500.0, 0.142, 20.156, 4.66, 2.504),
@@ -408,10 +407,11 @@ MOOG_MILLING_PEAK = [
     (11500.0, 0.156, 21.813, 4.89, 2.968),
     (11750.0, 0.159, 16.954, 3.81, 2.357),
     (12000.0, 0.162, 12.210, 2.76, 1.734),
-    (12250.0, 0.166, 7.578,  1.72, 1.098),
-    (12500.0, 0.169, 3.056,  0.72, 0.452),
+    (12250.0, 0.166, 7.578, 1.72, 1.098),
+    (12500.0, 0.169, 3.056, 0.72, 0.452),
     (12682.2, 0.172, -0.172, 0.00, -0.026),
 ]
+
 
 def _get_moog_dataset(name: str):
     n = (name or "").strip()
@@ -426,7 +426,6 @@ def _get_moog_dataset(name: str):
             "peak": MOOG_MILLING_PEAK,
         }
     return None
-
 
 
 # -----------------------------
@@ -513,8 +512,6 @@ class VfParams:
         return min(max(0.0, float(v)), self.v_phase_rms_limit())
 
 
-
-
 @dataclass
 class SineFilterParams:
     """Optional output sine filter between surface inverter and heptacable (steady-state, fundamental).
@@ -537,14 +534,15 @@ class SineFilterParams:
     enforce_inv_current_limit: bool = True  # Option B: limit inverter-side current including filter reactive draw
 
     # series element (per phase)
-    lf_h: float = 3.64e-3     # H
-    rf_ohm: float = 0.243   # ohm
+    lf_h: float = 3.64e-3  # H
+    rf_ohm: float = 0.243  # ohm
 
     # shunt network
-    cf_f: float = 1.0e-6   # F (interpreted by cap_connection)
+    cf_f: float = 1.0e-6  # F (interpreted by cap_connection)
     cap_connection: str = "WYE"  # "DELTA" or "WYE"
     damping_topology: str = "SERIES"  # "SERIES" or "PARALLEL"
-    rd_ohm: float = 0.0   # ohm
+    rd_ohm: float = 0.0  # ohm
+
 
 class FieldWeakeningParams:
     enabled: bool = False
@@ -561,14 +559,14 @@ class CableParams:
     temp_factor_r: float = 1.59
 
     # Cable temperature reference for R(T)
-    temp_ref_C: float = 20.0       # datasheet reference temp for R and ampacity
+    temp_ref_C: float = 20.0  # datasheet reference temp for R and ampacity
     temp_alpha_per_C: float = 0.00393  # copper-ish dR/R per °C (~0.393%/°C)
 
     # 5-segment custom temperature model (explicit segment lengths + temps)
     # When enabled, the cable is treated as 5 independent segments with user-specified length and average temperature.
     temp_model_5seg: bool = True
-    temp5_seg_len_m: List[float] = field(default_factory=lambda: [1500.0, 1100.0,  900.0, 1800.0, 1860.0])
-    temp5_seg_temp_C: List[float] = field(default_factory=lambda: [100.0,   125.0, 160.0, 175.0, 175.0])
+    temp5_seg_len_m: List[float] = field(default_factory=lambda: [1500.0, 1100.0, 900.0, 1800.0, 1860.0])
+    temp5_seg_temp_C: List[float] = field(default_factory=lambda: [100.0, 125.0, 160.0, 175.0, 175.0])
 
     wires_per_phase: int = 1  # 1 or 2
 
@@ -658,6 +656,7 @@ class CableParams:
         if self.i_limit_basis == "Per conductor":
             return I * max(1, int(self.wires_per_phase))
         return I
+
 
 @dataclass
 class MotorParams:
@@ -822,7 +821,7 @@ class LimitsParams:
 
     # contact block creepage / connector
     enforce_downhole_vll_limit: bool = True
-    downhole_vll_rms_limit: float = 254.0  # optional (line-to-line)
+    downhole_vll_rms_limit: float = 284.0  # optional (line-to-line)
 
 
 @dataclass
@@ -1260,10 +1259,12 @@ class SystemModel:
         pole_pairs = max(1, int(mp.pole_pairs))
         f_e = pole_pairs * (motor_rpm / 60.0)
         omega_e = 2.0 * math.pi * float(f_e)
-                # Include sine-filter *series* impedance in the conservative regen cable limit (shunt cap ignored here).
+        # Include sine-filter *series* impedance in the conservative regen cable limit (shunt cap ignored here).
         sf = getattr(p, "sine_filter", None)
-        R = float(cable.effective_r_phase()) + (float(getattr(sf, "rf_ohm", 0.0)) if (sf is not None and bool(getattr(sf, "enabled", False))) else 0.0)
-        L = float(cable.effective_l_phase()) + (float(getattr(sf, "lf_h", 0.0)) if (sf is not None and bool(getattr(sf, "enabled", False))) else 0.0)
+        R = float(cable.effective_r_phase()) + (
+            float(getattr(sf, "rf_ohm", 0.0)) if (sf is not None and bool(getattr(sf, "enabled", False))) else 0.0)
+        L = float(cable.effective_l_phase()) + (
+            float(getattr(sf, "lf_h", 0.0)) if (sf is not None and bool(getattr(sf, "enabled", False))) else 0.0)
         Z = math.sqrt(R * R + (omega_e * L) * (omega_e * L))
         Z = max(1e-12, Z)
 
@@ -1578,8 +1579,6 @@ class SystemModel:
         i_inv = self.inverter_current_mag_rms(motor_rpm, v_node_phase_rms, i_load_phase_rms)
         return float(v_node_phase_rms) + float(i_inv) * float(z_s)
 
-
-
     def cable_loss_w(self, i_mag_rms: float, cable: CableParams) -> float:
         R = cable.effective_r_phase()
         return 3.0 * (i_mag_rms ** 2) * R
@@ -1678,10 +1677,10 @@ class SystemModel:
                 v_node = v_motor + v_drop  # RMS phase at filter output / cable input
                 i_inv = self.inverter_current_mag_rms(motor_rpm, v_node, i_load)
                 return float(i_inv) - float(i_lim)
+
             iq_inv = self._bisect_root(f_iinv, 0.0, float(i_lim))
         else:
             iq_inv = float(i_lim)
-
 
         iq_max = min(i_lim, iq_volt, iq_dh, iq_inv)
         # with Id=0: i_mag = iq
@@ -1953,7 +1952,7 @@ class SystemModel:
         #  - Motoring: output torque required is in the same direction as commanded rotation.
         #  - Regen: output torque required opposes commanded rotation (electrical braking / TOB-assist case).
         regen_required = (t_brake_out_nm > 1e-9) and (not bool(getattr(p, "stuck_mode", False))) and (
-                    out_rpm_cmd_mag > 1e-12)
+                out_rpm_cmd_mag > 1e-12)
         t_out_for_elec_nm = t_brake_out_nm if regen_required else t_drive_out_nm
 
         # Convert the required output torque (drive or brake) into gearbox input torque magnitude
@@ -2149,7 +2148,7 @@ class SystemModel:
             i_limit_phase_mag=i_lim,
             f_e_hz=f_e,
             v_surface_cmd=(regen_clamp_phase_v if (
-                        regen_required and bool(getattr(p, 'regen_cable_limit_enabled', True))) else v_cmd),
+                    regen_required and bool(getattr(p, 'regen_cable_limit_enabled', True))) else v_cmd),
             v_surface_limit=v_surface_limit,
             v_motor_req=v_motor_req,
             v_cable_drop=v_drop,
@@ -2401,7 +2400,6 @@ class MplPane(QWidget):
         layout.addWidget(self.canvas)
 
 
-
 class SweepPane(QWidget):
     def __init__(self, parent: Optional[QWidget] = None):
         super().__init__(parent)
@@ -2481,10 +2479,6 @@ class BandPane(QWidget):
         layout.addWidget(self.canvas)
 
 
-
-
-
-
 class TablesPane(QWidget):
     """Decision tables pane.
 
@@ -2510,8 +2504,6 @@ class TablesPane(QWidget):
         self.canvas = FigureCanvas(self.fig)
         self.canvas.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         layout.addWidget(self.canvas)
-
-
 
 
 class MotorOpsPane(QWidget):
@@ -2604,7 +2596,8 @@ class MotorOpsPane(QWidget):
                params: SystemParams):
 
         # Clear plots
-        for ax in (self.ax_i, self.ax_v, self.ax_emf, self.ax_f, self.ax_tm, self.ax_out, self.ax_out_p, self.ax_tbl_1w, self.ax_tbl_2w):
+        for ax in (self.ax_i, self.ax_v, self.ax_emf, self.ax_f, self.ax_tm, self.ax_out, self.ax_out_p, self.ax_tbl_1w,
+                   self.ax_tbl_2w):
             ax.cla()
 
         # Unpack
@@ -2625,9 +2618,11 @@ class MotorOpsPane(QWidget):
 
         # Mark UI target points (requested operating point, not max-torque envelope)
         if res_1w is not None:
-            self.ax_i.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.i_mag_used_rms)], marker="o", s=35, label="UI |I| (1w)")
+            self.ax_i.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.i_mag_used_rms)], marker="o", s=35,
+                              label="UI |I| (1w)")
         if res_2w is not None:
-            self.ax_i.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.i_mag_used_rms)], marker="o", s=35, label="UI |I| (2w)")
+            self.ax_i.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.i_mag_used_rms)], marker="o", s=35,
+                              label="UI |I| (2w)")
 
         self.ax_i.set_title("Motor currents vs output RPM")
         self.ax_i.set_xlabel("Output RPM (abs)")
@@ -2649,9 +2644,11 @@ class MotorOpsPane(QWidget):
             pass
 
         if res_1w is not None:
-            self.ax_v.scatter([abs(float(res_1w.out_rpm_cmd))], [math.sqrt(3.0) * float(res_1w.v_motor_req)], marker="o", s=35, label="UI VLL (1w)")
+            self.ax_v.scatter([abs(float(res_1w.out_rpm_cmd))], [math.sqrt(3.0) * float(res_1w.v_motor_req)],
+                              marker="o", s=35, label="UI VLL (1w)")
         if res_2w is not None:
-            self.ax_v.scatter([abs(float(res_2w.out_rpm_cmd))], [math.sqrt(3.0) * float(res_2w.v_motor_req)], marker="o", s=35, label="UI VLL (2w)")
+            self.ax_v.scatter([abs(float(res_2w.out_rpm_cmd))], [math.sqrt(3.0) * float(res_2w.v_motor_req)],
+                              marker="o", s=35, label="UI VLL (2w)")
 
         self.ax_v.set_title("Motor terminal voltage vs output RPM")
         self.ax_v.set_xlabel("Output RPM (abs)")
@@ -2682,9 +2679,11 @@ class MotorOpsPane(QWidget):
         self.ax_f.plot(x1, m1.get("f_e", np.zeros_like(x1)), label="f_e (1w)")
         self.ax_f.plot(x2, m2.get("f_e", np.zeros_like(x2)), label="f_e (2w)")
         if res_1w is not None:
-            self.ax_f.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.f_e_hz)], marker="o", s=35, label="UI f_e (1w)")
+            self.ax_f.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.f_e_hz)], marker="o", s=35,
+                              label="UI f_e (1w)")
         if res_2w is not None:
-            self.ax_f.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.f_e_hz)], marker="o", s=35, label="UI f_e (2w)")
+            self.ax_f.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.f_e_hz)], marker="o", s=35,
+                              label="UI f_e (2w)")
 
         self.ax_f.set_title("Electrical frequency vs output RPM")
         self.ax_f.set_xlabel("Output RPM (abs)")
@@ -2699,9 +2698,11 @@ class MotorOpsPane(QWidget):
         self.ax_tm.plot(x2, m2.get("t_motor_use_nm", np.zeros_like(x2)), linestyle="--", label="T_useful (2w)")
 
         if res_1w is not None:
-            self.ax_tm.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.motor_torque_total_nm)], marker="o", s=35, label="UI T_motor (1w)")
+            self.ax_tm.scatter([abs(float(res_1w.out_rpm_cmd))], [float(res_1w.motor_torque_total_nm)], marker="o",
+                               s=35, label="UI T_motor (1w)")
         if res_2w is not None:
-            self.ax_tm.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.motor_torque_total_nm)], marker="o", s=35, label="UI T_motor (2w)")
+            self.ax_tm.scatter([abs(float(res_2w.out_rpm_cmd))], [float(res_2w.motor_torque_total_nm)], marker="o",
+                               s=35, label="UI T_motor (2w)")
 
         self.ax_tm.set_title("Motor torque vs output RPM")
         self.ax_tm.set_xlabel("Output RPM (abs)")
@@ -2715,19 +2716,23 @@ class MotorOpsPane(QWidget):
 
         # UI required output torque marker (drive torque, magnitude)
         if res_1w is not None:
-            self.ax_out.scatter([abs(float(res_1w.out_rpm_cmd))], [abs(float(res_1w.out_drive_torque_req_ftlbf))], marker="o", s=35, label="UI Tout req (1w)")
+            self.ax_out.scatter([abs(float(res_1w.out_rpm_cmd))], [abs(float(res_1w.out_drive_torque_req_ftlbf))],
+                                marker="o", s=35, label="UI Tout req (1w)")
         if res_2w is not None:
-            self.ax_out.scatter([abs(float(res_2w.out_rpm_cmd))], [abs(float(res_2w.out_drive_torque_req_ftlbf))], marker="o", s=35, label="UI Tout req (2w)")
+            self.ax_out.scatter([abs(float(res_2w.out_rpm_cmd))], [abs(float(res_2w.out_drive_torque_req_ftlbf))],
+                                marker="o", s=35, label="UI Tout req (2w)")
 
         # Power on the twin axis
         self.ax_out_p.plot(x1, m1.get("p_out_w", np.zeros_like(x1)) / 1000.0, linestyle=":", label="Pout cap (1w)")
         self.ax_out_p.plot(x2, m2.get("p_out_w", np.zeros_like(x2)) / 1000.0, linestyle=":", label="Pout cap (2w)")
 
         if res_1w is not None:
-            p_kw = (ft_lbf_to_nm(abs(float(res_1w.out_drive_torque_req_ftlbf))) * rpm_to_rad_s(abs(float(res_1w.out_rpm_cmd)))) / 1000.0
+            p_kw = (ft_lbf_to_nm(abs(float(res_1w.out_drive_torque_req_ftlbf))) * rpm_to_rad_s(
+                abs(float(res_1w.out_rpm_cmd)))) / 1000.0
             self.ax_out_p.scatter([abs(float(res_1w.out_rpm_cmd))], [p_kw], marker="o", s=35, label="UI Pout req (1w)")
         if res_2w is not None:
-            p_kw = (ft_lbf_to_nm(abs(float(res_2w.out_drive_torque_req_ftlbf))) * rpm_to_rad_s(abs(float(res_2w.out_rpm_cmd)))) / 1000.0
+            p_kw = (ft_lbf_to_nm(abs(float(res_2w.out_drive_torque_req_ftlbf))) * rpm_to_rad_s(
+                abs(float(res_2w.out_rpm_cmd)))) / 1000.0
             self.ax_out_p.scatter([abs(float(res_2w.out_rpm_cmd))], [p_kw], marker="o", s=35, label="UI Pout req (2w)")
 
         self.ax_out.set_title("Output torque & power vs output RPM (capability)")
@@ -2756,7 +2761,8 @@ class MotorOpsPane(QWidget):
             # unique + sorted
             pts = sorted({round(float(p), 6) for p in pts})
 
-            cols = ["Out RPM", "Motor RPM", "f_e (Hz)", "Iq (A)", "|I| (A)", "VLL (V)", "Tmot_use (N·m)", "Tout (ft-lbf)", "Pout (kW)", "Pcu (W)"]
+            cols = ["Out RPM", "Motor RPM", "f_e (Hz)", "Iq (A)", "|I| (A)", "VLL (V)", "Tmot_use (N·m)",
+                    "Tout (ft-lbf)", "Pout (kW)", "Pcu (W)"]
             rows = []
             for p in pts:
                 mrpm = self._interp(out_rpm, metrics.get("motor_rpm", out_rpm * 0.0), p)
@@ -2798,7 +2804,6 @@ class MotorOpsPane(QWidget):
         self.canvas.draw_idle()
 
 
-
 class MoogCurvesPane(QWidget):
     """Compare the current τ_extra implementation against MOOG operating-curve tables.
 
@@ -2812,7 +2817,8 @@ class MoogCurvesPane(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
 
-        self.lbl = QLabel("Select an Extra Torque preset to view its MOOG curve (Milling is populated; Spear/Annular are placeholders).")
+        self.lbl = QLabel(
+            "Select an Extra Torque preset to view its MOOG curve (Milling is populated; Spear/Annular are placeholders).")
         self.lbl.setWordWrap(True)
         self.lbl.setStyleSheet("color:#444;")
         layout.addWidget(self.lbl)
@@ -2846,8 +2852,10 @@ class MoogCurvesPane(QWidget):
     def render(self, model: "SystemModel", params: "SystemParams", preset_name: str):
         ds = _get_moog_dataset(preset_name)
         if not ds:
-            self.lbl.setText("No MOOG dataset selected. Choose 'Milling Moog Curve' (or a placeholder preset) in Extra Torque.")
-            self._clear("MOOG dataset not available for this preset.\n\nTip: Select 'Milling Moog Curve' in Extra Torque.")
+            self.lbl.setText(
+                "No MOOG dataset selected. Choose 'Milling Moog Curve' (or a placeholder preset) in Extra Torque.")
+            self._clear(
+                "MOOG dataset not available for this preset.\n\nTip: Select 'Milling Moog Curve' in Extra Torque.")
             return
 
         self.lbl.setText(f"MOOG dataset: {ds['name']}  |  Preset selected: {preset_name}")
@@ -2963,7 +2971,8 @@ class MoogCurvesPane(QWidget):
         s = []
         s.append("Back-calc uses MOOG Kt (KtTR) and your current τ_extra model.")
         s.append(f"  Kt_moog = {kt_moog_lbin_arms:.4g} lbf-in/Arms")
-        s.append(f"  Kt_model(current) = {kt_model_lbin_arms:.4g} lbf-in/Arms  (Kt(T)={'ON' if params.extra.kt_temp_enabled else 'OFF'}, T={params.extra.temp_C:.0f}°C)")
+        s.append(
+            f"  Kt_model(current) = {kt_model_lbin_arms:.4g} lbf-in/Arms  (Kt(T)={'ON' if params.extra.kt_temp_enabled else 'OFF'}, T={params.extra.temp_C:.0f}°C)")
         s.append("")
         s.append("Continuous set errors (lbf-in):")
         s.append(f"  RMSE[loss]  = {rmse(loss_c_lbf, tau_extra_c_lbf):.3g}")
@@ -2977,7 +2986,6 @@ class MoogCurvesPane(QWidget):
         self.txt.setPlainText("\n".join(s))
 
         self.canvas.draw_idle()
-
 
 
 class StonehousePresetPane(QWidget):
@@ -3039,7 +3047,6 @@ class StonehousePresetPane(QWidget):
                 self._interactor.refresh()
         except Exception:
             pass
-
 
 
 class ArchitecturePane(QWidget):
@@ -3228,28 +3235,34 @@ class DashboardPane(QWidget):
         sgn = 1.0 if str(getattr(p, 'out_dir', 'CW')).upper().startswith('CW') else -1.0
         out_rpm = float(getattr(res, 'out_rpm_cmd', 0.0))
         omega_out = out_rpm * RPM_TO_RADPS
-        tau_out_req_ftlbf_signed = sgn * (float(getattr(res, 'out_drive_torque_req_ftlbf', 0.0)) - float(getattr(res, 'out_brake_torque_req_ftlbf', 0.0)))
+        tau_out_req_ftlbf_signed = sgn * (float(getattr(res, 'out_drive_torque_req_ftlbf', 0.0)) - float(
+            getattr(res, 'out_brake_torque_req_ftlbf', 0.0)))
         p_out_w = (tau_out_req_ftlbf_signed * FTLBF_TO_NM) * omega_out
 
         quad = 'STATIC (ω≈0)' if abs(out_rpm) < 1e-9 else ('MOTORING (Pout>0)' if p_out_w > 0 else 'BRAKING (Pout<0)')
 
         # Command
-        self._set('pass_fail', 'PASS — target point feasible' if getattr(res, 'feasible', False) else 'FAIL — constraint violation')
+        self._set('pass_fail',
+                  'PASS — target point feasible' if getattr(res, 'feasible', False) else 'FAIL — constraint violation')
         self._set('cmd', f"{getattr(p, 'out_dir', '—')} {out_rpm:.3f} rpm  (CW=+, CCW=-)")
-        self._set('quad', f"{quad}  |  P_out≈{p_out_w/1000.0:.3f} kW")
+        self._set('quad', f"{quad}  |  P_out≈{p_out_w / 1000.0:.3f} kW")
 
         braking_path = bool(getattr(p, 'braking_path_available', True))
         regen_limit_on = bool(getattr(p, 'regen_cable_limit_enabled', True))
         clamp_frac = float(getattr(p, 'regen_surface_clamp_frac', 1.0))
         backdrivable = bool(getattr(getattr(p, 'gearbox', p), 'backdrivable', True))
 
-        self._set('braking', f"braking_path={'YES' if braking_path else 'NO'} | cable_limit={'ON' if regen_limit_on else 'OFF'} (clamp={clamp_frac:.2f})")
+        self._set('braking',
+                  f"braking_path={'YES' if braking_path else 'NO'} | cable_limit={'ON' if regen_limit_on else 'OFF'} (clamp={clamp_frac:.2f})")
         self._set('backdrive', 'YES' if backdrivable else 'NO')
 
         # Mechanical
-        self._set('tout_req', f"drive={float(getattr(res,'out_drive_torque_req_ftlbf',0.0)):.0f} ft-lbf, brake={float(getattr(res,'out_brake_torque_req_ftlbf',0.0)):.0f} ft-lbf")
-        self._set('tout_terms', f"τ_TOB={float(getattr(res,'tob_reaction_ftlbf',0.0)):.0f}, τ_BHA_fric={float(getattr(res,'bha_friction_ftlbf',0.0)):.0f}, τ_parasitic={float(getattr(res,'parasitic_ftlbf',0.0)):.0f} ft-lbf")
-        self._set('gear', f"G={float(getattr(res,'gear_ratio',0.0)):.1f}, η={float(getattr(res,'gear_eff',0.0)):.3f}")
+        self._set('tout_req',
+                  f"drive={float(getattr(res, 'out_drive_torque_req_ftlbf', 0.0)):.0f} ft-lbf, brake={float(getattr(res, 'out_brake_torque_req_ftlbf', 0.0)):.0f} ft-lbf")
+        self._set('tout_terms',
+                  f"τ_TOB={float(getattr(res, 'tob_reaction_ftlbf', 0.0)):.0f}, τ_BHA_fric={float(getattr(res, 'bha_friction_ftlbf', 0.0)):.0f}, τ_parasitic={float(getattr(res, 'parasitic_ftlbf', 0.0)):.0f} ft-lbf")
+        self._set('gear',
+                  f"G={float(getattr(res, 'gear_ratio', 0.0)):.1f}, η={float(getattr(res, 'gear_eff', 0.0)):.3f}")
 
         # Motor
         motor_rpm = float(getattr(res, 'motor_rpm', 0.0))
@@ -3262,21 +3275,28 @@ class DashboardPane(QWidget):
             f_e = None
         fe_s = f"{f_e:.2f} Hz" if f_e is not None else '—'
         self._set('motor_rpm', f"{motor_rpm:.0f} rpm  |  f_e≈{fe_s}")
-        self._set('tmot', f"{float(getattr(res,'motor_torque_nm',0.0)):.3f} N·m" + ("  [MAG SLIP RISK]" if bool(getattr(res,'mag_slipping',False)) else ""))
-        self._set('textra', f"τ_core={float(getattr(res,'tau_core_nm',0.0)):.3f}, τ_visc={float(getattr(res,'tau_visc_nm',0.0)):.3f}, τ_extra={float(getattr(res,'tau_extra_nm',0.0)):.3f} N·m")
-        self._set('kt', f"{float(getattr(res,'kt_eff_nm_per_arms',0.0)):.6f} N·m/Arms  @T={float(getattr(res,'temp_C',0.0)):.1f} °C")
+        self._set('tmot', f"{float(getattr(res, 'motor_torque_nm', 0.0)):.3f} N·m" + (
+            "  [MAG SLIP RISK]" if bool(getattr(res, 'mag_slipping', False)) else ""))
+        self._set('textra',
+                  f"τ_core={float(getattr(res, 'tau_core_nm', 0.0)):.3f}, τ_visc={float(getattr(res, 'tau_visc_nm', 0.0)):.3f}, τ_extra={float(getattr(res, 'tau_extra_nm', 0.0)):.3f} N·m")
+        self._set('kt',
+                  f"{float(getattr(res, 'kt_eff_nm_per_arms', 0.0)):.6f} N·m/Arms  @T={float(getattr(res, 'temp_C', 0.0)):.1f} °C")
 
         # Currents
-        self._set('iq', f"Iq_base={float(getattr(res,'iq_req_base_rms',0.0)):.3f}, Iq_total={float(getattr(res,'iq_req_rms',0.0)):.3f}, Iq_max={float(getattr(res,'iq_max_rms',0.0)):.3f}")
-        self._set('imag', f"|I|_used={float(getattr(res,'i_mag_used_rms',0.0)):.3f} Arms, |I|_limit={float(getattr(res,'i_limit_phase_mag',0.0)):.3f} Arms  (basis: {getattr(getattr(p,'cable',p),'i_limit_basis','—')})")
-        self._set('fw', f"{'ON' if bool(getattr(getattr(p,'fw',p),'enabled',False)) else 'OFF'}  (Id_used={float(getattr(res,'id_used_rms',0.0)):.3f} Arms)")
+        self._set('iq',
+                  f"Iq_base={float(getattr(res, 'iq_req_base_rms', 0.0)):.3f}, Iq_total={float(getattr(res, 'iq_req_rms', 0.0)):.3f}, Iq_max={float(getattr(res, 'iq_max_rms', 0.0)):.3f}")
+        self._set('imag',
+                  f"|I|_used={float(getattr(res, 'i_mag_used_rms', 0.0)):.3f} Arms, |I|_limit={float(getattr(res, 'i_limit_phase_mag', 0.0)):.3f} Arms  (basis: {getattr(getattr(p, 'cable', p), 'i_limit_basis', '—')})")
+        self._set('fw',
+                  f"{'ON' if bool(getattr(getattr(p, 'fw', p), 'enabled', False)) else 'OFF'}  (Id_used={float(getattr(res, 'id_used_rms', 0.0)):.3f} Arms)")
 
         # Voltages
-        ll_surface_cmd = float(getattr(res,'v_surface_cmd',0.0)) * math.sqrt(3.0)
-        ll_inverter_req = float(getattr(res,'v_inverter_req',0.0)) * math.sqrt(3.0)
-        ll_motor_req = float(getattr(res,'v_motor_req',0.0)) * math.sqrt(3.0)
+        ll_surface_cmd = float(getattr(res, 'v_surface_cmd', 0.0)) * math.sqrt(3.0)
+        ll_inverter_req = float(getattr(res, 'v_inverter_req', 0.0)) * math.sqrt(3.0)
+        ll_motor_req = float(getattr(res, 'v_motor_req', 0.0)) * math.sqrt(3.0)
 
-        self._set('vbudget', f"Vcmd={float(getattr(res,'v_surface_cmd',0.0)):.1f} (≈{ll_surface_cmd:.1f} Vll), Vreq(inv)={float(getattr(res,'v_inverter_req',0.0)):.1f} (≈{ll_inverter_req:.1f} Vll), Vnode={float(getattr(res,'v_node_req',0.0)):.1f}, Vmotor={float(getattr(res,'v_motor_req',0.0)):.1f} (≈{ll_motor_req:.1f} Vll), Vdrop(cable)={float(getattr(res,'v_cable_drop',0.0)):.1f}")
+        self._set('vbudget',
+                  f"Vcmd={float(getattr(res, 'v_surface_cmd', 0.0)):.1f} (≈{ll_surface_cmd:.1f} Vll), Vreq(inv)={float(getattr(res, 'v_inverter_req', 0.0)):.1f} (≈{ll_inverter_req:.1f} Vll), Vnode={float(getattr(res, 'v_node_req', 0.0)):.1f}, Vmotor={float(getattr(res, 'v_motor_req', 0.0)):.1f} (≈{ll_motor_req:.1f} Vll), Vdrop(cable)={float(getattr(res, 'v_cable_drop', 0.0)):.1f}")
 
         v_surface_lim = getattr(res, 'v_surface_limit', None)
         v_dh_ph_lim = getattr(res, 'v_downhole_phase_limit', None)
@@ -3291,9 +3311,10 @@ class DashboardPane(QWidget):
         self._set('vlimits', ' | '.join(lim_parts) if lim_parts else '—')
 
         # Losses
-        self._set('cable_loss', f"{float(getattr(res,'p_cable_loss_w',0.0)):.1f} W")
-        if (float(getattr(res,'i_filter_cap_rms',0.0)) > 1e-9) or (float(getattr(res,'v_filter_drop',0.0)) > 1e-9):
-            self._set('filter', f"I_load={float(getattr(res,'i_mag_used_rms',0.0)):.3f} Arms, I_inv≈{float(getattr(res,'i_inverter_rms',0.0)):.3f} Arms, I_shunt≈{float(getattr(res,'i_filter_cap_rms',0.0)):.3f} Arms, Vdrop≈{float(getattr(res,'v_filter_drop',0.0)):.2f} Vrms")
+        self._set('cable_loss', f"{float(getattr(res, 'p_cable_loss_w', 0.0)):.1f} W")
+        if (float(getattr(res, 'i_filter_cap_rms', 0.0)) > 1e-9) or (float(getattr(res, 'v_filter_drop', 0.0)) > 1e-9):
+            self._set('filter',
+                      f"I_load={float(getattr(res, 'i_mag_used_rms', 0.0)):.3f} Arms, I_inv≈{float(getattr(res, 'i_inverter_rms', 0.0)):.3f} Arms, I_shunt≈{float(getattr(res, 'i_filter_cap_rms', 0.0)):.3f} Arms, Vdrop≈{float(getattr(res, 'v_filter_drop', 0.0)):.2f} Vrms")
         else:
             self._set('filter', '—')
 
@@ -3304,14 +3325,16 @@ class DashboardPane(QWidget):
 
         Vsurf_cmd = getattr(res, 'v_surface_cmd', None)
         Vsurf_lim = getattr(res, 'v_surface_limit', None)
-        Vsurf_margin_cmd = (float(Vsurf_lim) - float(Vsurf_cmd)) if (Vsurf_cmd is not None and Vsurf_lim is not None) else None
+        Vsurf_margin_cmd = (float(Vsurf_lim) - float(Vsurf_cmd)) if (
+                    Vsurf_cmd is not None and Vsurf_lim is not None) else None
 
         Vdh_ll_margin = None
         if v_dh_ll_lim is not None:
             Vdh_ll_margin = float(v_dh_ll_lim) - ll_motor_req
 
         self._set('i_margin', f"{I_margin:.2f} A" if I_margin is not None else '—')
-        self._set('v_margin', f"surface(cmd)={Vsurf_margin_cmd:.2f} V, dh_VLL={Vdh_ll_margin:.2f} V" if (Vsurf_margin_cmd is not None and Vdh_ll_margin is not None) else '—')
+        self._set('v_margin', f"surface(cmd)={Vsurf_margin_cmd:.2f} V, dh_VLL={Vdh_ll_margin:.2f} V" if (
+                    Vsurf_margin_cmd is not None and Vdh_ll_margin is not None) else '—')
 
         if dominant is not None:
             lab, m, used, lim = dominant
@@ -3329,9 +3352,6 @@ class DashboardPane(QWidget):
             self.raw.setPlainText(full_text)
         except Exception:
             pass
-
-
-
 
 
 class DirectionRiskPane(QWidget):
@@ -3834,7 +3854,7 @@ class NavigatorVfWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("QuadScope v22.0")
-        #self.resize(1650, 900)
+        # self.resize(1650, 900)
         self.resize(3000, 1700)
 
         self.params = SystemParams()
@@ -3896,7 +3916,6 @@ class NavigatorVfWindow(QMainWindow):
         self.tabs.addTab(self.mpl_anim, "Animation")
         self.anim_pane = self.mpl_anim
 
-
         # Nested sweep tabs (trade assessment)
         self.sweep_tabs = QTabWidget()
         self.sweep_ratio = SweepPane()
@@ -3928,12 +3947,6 @@ class NavigatorVfWindow(QMainWindow):
 
         # Backward-compatible alias used by plotting helpers
         self.band_pane = self.mpl_band
-
-
-
-
-
-
 
         splitter.addWidget(self.left_scroll)
         splitter.addWidget(self.tabs)
@@ -4249,7 +4262,7 @@ class NavigatorVfWindow(QMainWindow):
         gl_sf.addWidget(self.sf_rd_ohm, 6, 1)
 
         note = QLabel("Note: Cf is interpreted by connection (DELTA: per branch, WYE: per phase).\n"
-        "Steady-state fundamental approximation; adds I_shunt and Vdrop across Lf/Rf.")
+                      "Steady-state fundamental approximation; adds I_shunt and Vdrop across Lf/Rf.")
         note.setWordWrap(True)
         note.setStyleSheet("color: #666;")
         gl_sf.addWidget(note, 7, 0, 1, 2)
@@ -4291,7 +4304,8 @@ class NavigatorVfWindow(QMainWindow):
         add_slider_row(C, 7, "2-wire L factor", self.c_lpar, "Inductance multiplier when using 2 wires/phase")
         # --- Cable temperature model (optional) ---
         self.c_temp_ref = make_dspin(-50.0, 80.0, 1.0, float(getattr(self.params.cable, "temp_ref_C", 20.0)), 1)
-        self.c_temp_alpha = make_dspin(0.0, 0.02, 0.00010, float(getattr(self.params.cable, "temp_alpha_per_C", 0.00393)), 5)
+        self.c_temp_alpha = make_dspin(0.0, 0.02, 0.00010,
+                                       float(getattr(self.params.cable, "temp_alpha_per_C", 0.00393)), 5)
 
         # 2) 5-segment custom profile (explicit Li + Ti per segment)
         self.c_temp_5seg = QCheckBox("5-seg custom temp profile (length + temp per segment)")
@@ -4347,7 +4361,6 @@ class NavigatorVfWindow(QMainWindow):
         # Ensure enable/disable state is correct at startup; live recompute is handled by _connect_signals().
         self._update_cable_temp_ui_enabled()
 
-
         self.lbl_cable_R = QLabel("—")
         self.lbl_cable_L = QLabel("—")
         self.lbl_cable_Iph = QLabel("—")
@@ -4368,7 +4381,8 @@ class NavigatorVfWindow(QMainWindow):
         M = QGridLayout(gb_motor)
 
         self.m_preset = QComboBox()
-        self.m_preset.addItems(["Spear motor", "Milling motor", "Annular Motor - John", "User defined"])
+        self.m_preset.addItems(
+            ["Spear motor", "Milling motor", "Annular Motor - John", "Annular Motor - John2", "Annular Motor - John3", "User defined"])
         self.m_preset.setCurrentText("Spear motor")
 
         self.m_pp = make_ispin(1, 10, 1, self.params.motor.pole_pairs)
@@ -4570,18 +4584,23 @@ class NavigatorVfWindow(QMainWindow):
         Gm = QGridLayout(gb_mag)
 
         rr = 0
-        Gm.addWidget(self.chk_mag, rr, 0, 1, 3); rr += 1
+        Gm.addWidget(self.chk_mag, rr, 0, 1, 3);
+        rr += 1
         add_slider_row(Gm, rr, "T_break (Nm)", self.mag_tbreak,
-                       "Low-slip drag torque (eddy-current / shear) that always opposes relative motion."); rr += 1
+                       "Low-slip drag torque (eddy-current / shear) that always opposes relative motion.");
+        rr += 1
         add_slider_row(Gm, rr, "T_slip (Nm)", self.mag_tslip,
-                       "Max transmitted torque before the coupler slips (torque clamp)."); rr += 1
+                       "Max transmitted torque before the coupler slips (torque clamp).");
+        rr += 1
         add_slider_row(Gm, rr, "Slope", self.mag_slope,
-                       "Shape factor for slip curve (higher = stiffer transition)."); rr += 1
+                       "Shape factor for slip curve (higher = stiffer transition).");
+        rr += 1
 
         note_mag = QLabel("Note: This block sits between PMSM and gearbox. It is not an external BHA load.")
         note_mag.setWordWrap(True)
         note_mag.setStyleSheet("color:#444;")
-        Gm.addWidget(note_mag, rr, 0, 1, 3); rr += 1
+        Gm.addWidget(note_mag, rr, 0, 1, 3);
+        rr += 1
 
         self.left_layout.addWidget(gb_mag)
 
@@ -4787,7 +4806,8 @@ class NavigatorVfWindow(QMainWindow):
             self.base_f, self.base_v, self.v_boost,
             self.combo_strategy,
             self.chk_fw, self.chk_fw_base_only, self.fw_idmax,
-            self.sf_enable, self.sf_lf_mH, self.sf_rf_ohm, self.sf_cf_uF, self.sf_cap_conn, self.sf_damp_topo, self.sf_rd_ohm,
+            self.sf_enable, self.sf_lf_mH, self.sf_rf_ohm, self.sf_cf_uF, self.sf_cap_conn, self.sf_damp_topo,
+            self.sf_rd_ohm,
             self.c_len, self.c_rpm, self.c_lpm, self.c_temp, self.c_wires, self.c_ilim_basis, self.c_ilim, self.c_lpar,
             self.c_temp_ref, self.c_temp_alpha,
             self.c_len_band,
@@ -4828,7 +4848,6 @@ class NavigatorVfWindow(QMainWindow):
         if hasattr(self, "c_5seg_T"):
             widgets.extend(list(self.c_5seg_T))
 
-
         def hook(w):
             if isinstance(w, (QDoubleSpinBox, QSpinBox)):
                 w.valueChanged.connect(self._on_any_change)
@@ -4867,7 +4886,6 @@ class NavigatorVfWindow(QMainWindow):
         name = self.g_preset.currentText() if hasattr(self, "g_preset") else ""
         self._apply_gearbox_preset(name)
 
-    
     def _on_extra_torque_preset_changed(self):
         if getattr(self, "_bulk_updating", False):
             return
@@ -4888,10 +4906,10 @@ class NavigatorVfWindow(QMainWindow):
             return
 
         # UI guard
-        need = ("x_enable_extra","x_enable_ktT","x_enable_rsT","x_temp","x_tref","x_kt_tc",
-                "x_core_en","x_core_cl","x_core_exp","x_visc_en","x_visc_model","x_k_c","x_k_tr",
-                "x_n_tr","x_k_tb","x_rpm1","x_rpm2","x_visc_T","x_visc_a","x_visc_beta","x_smooth","x_smooth_f",
-                "x_wind_dT","x_rs_tc")
+        need = ("x_enable_extra", "x_enable_ktT", "x_enable_rsT", "x_temp", "x_tref", "x_kt_tc",
+                "x_core_en", "x_core_cl", "x_core_exp", "x_visc_en", "x_visc_model", "x_k_c", "x_k_tr",
+                "x_n_tr", "x_k_tb", "x_rpm1", "x_rpm2", "x_visc_T", "x_visc_a", "x_visc_beta", "x_smooth", "x_smooth_f",
+                "x_wind_dT", "x_rs_tc")
         if not all(hasattr(self, a) for a in need):
             return
 
@@ -4915,7 +4933,8 @@ class NavigatorVfWindow(QMainWindow):
                 self.x_core_exp.setValue(float(getattr(d, "core_exp", 0.5)))
 
                 self.x_visc_en.setChecked(bool(d.visc_enabled))
-                self.x_visc_model.setCurrentText(str(getattr(d, "visc_model", "Piecewise (Couette→Transition→Turbulent)")))
+                self.x_visc_model.setCurrentText(
+                    str(getattr(d, "visc_model", "Piecewise (Couette→Transition→Turbulent)")))
                 self.x_k_c.setValue(float(getattr(d, "visc_k_couette", 0.0)))
                 self.x_k_tr.setValue(float(getattr(d, "visc_k_transition", 0.0)))
                 self.x_n_tr.setValue(float(getattr(d, "visc_n_transition", 1.5)))
@@ -4984,12 +5003,28 @@ class NavigatorVfWindow(QMainWindow):
                 "ke_vll_peak_krpm": 45.74,
             },
             "Annular Motor - John": {
-                "pole_pairs": 4,             # 8 poles @ 3000 rpm → 200 Hz fundamental
-                "rs_ohm": 7.334 / 2.0,       # line-line (wye) → per-phase
-                "ld_h": 1.692e-3,            # D-axis inductance (H)
-                "lq_h": 1.983e-3,            # Q-axis inductance (H)
-                "kt_lbin_arms": 6.237,       # torque constant (lb-in/Arms)
-                "ke_vll_peak_krpm": 83.82,   # back-EMF (Vll_peak/krpm)
+                "pole_pairs": 4,  # 8 poles @ 3000 rpm → 200 Hz fundamental
+                "rs_ohm": 7.334 / 2.0,  # line-line (wye) → per-phase
+                "ld_h": 1.692e-3,  # D-axis inductance (H)
+                "lq_h": 1.983e-3,  # Q-axis inductance (H)
+                "kt_lbin_arms": 6.237,  # torque constant (lb-in/Arms)
+                "ke_vll_peak_krpm": 83.82,  # back-EMF (Vll_peak/krpm)
+            },
+            "Annular Motor - John2": {
+                "pole_pairs": 4,  # 8 poles @ 3000 rpm → 200 Hz fundamental
+                "rs_ohm": 9.114 / 2.0,  # line-line (wye) → per-phase
+                "ld_h": 2.045e-3,  # D-axis inductance (H)
+                "lq_h": 2.467e-3,  # Q-axis inductance (H)
+                "kt_lbin_arms": 6.852,  # torque constant (lb-in/Arms)
+                "ke_vll_peak_krpm": 93.9,  # back-EMF (Vll_peak/krpm) (fundamental)
+            },
+            "Annular Motor - John3": {
+                "pole_pairs": 4,  # assumed same annular-motor pole-pair count as John / John2
+                "rs_ohm": 3.52 / 2.0,  # line-line (wye) → per-phase = 1.76 ohm
+                "ld_h": 1.044e-3,  # D-axis inductance (H)
+                "lq_h": 1.192e-3,  # Q-axis inductance (H)
+                "kt_lbin_arms": 3.725,  # torque constant (lb-in/Arms)
+                "ke_vll_peak_krpm": 51.37,  # back-EMF (Vll_peak/krpm), using screenshot fundamental value
             },
             "User defined": {
                 # "User defined" means: restore the tool's built-in defaults (same basis as startup).
@@ -5132,7 +5167,6 @@ class NavigatorVfWindow(QMainWindow):
         if self.chk_auto.isChecked():
             self.update_all()
 
-
     def _update_strategy_ui_enabled(self):
         """Enable/disable UI controls that are irrelevant under selected strategy."""
         if not hasattr(self, "combo_strategy"):
@@ -5235,11 +5269,6 @@ class NavigatorVfWindow(QMainWindow):
                 self.lbl_c_5seg_total.setText("—")
             if hasattr(self, "c_len"):
                 self.c_len.setEnabled(True)
-
-
-
-
-
 
     def _apply_voltage_basis_visibility(self) -> None:
         """Show/hide the AC vs DC voltage-entry blocks based on dropdown."""
@@ -5595,7 +5624,6 @@ class NavigatorVfWindow(QMainWindow):
         self._plot_envelope(res_sel, (env_rpm_1, env_tq_1, env_iq_1, env_loss_1),
                             (env_rpm_2, env_tq_2, env_iq_2, env_loss_2))
 
-        
         # Motor metrics along envelope for utilization + Motor tab
         # We compute values at the max-torque operating point for each RPM.
         def _env_motor_metrics(env_rpm: np.ndarray, cable: CableParams) -> Dict[str, np.ndarray]:
@@ -5612,10 +5640,10 @@ class NavigatorVfWindow(QMainWindow):
             out["i_limit"] = np.full_like(env_rpm, float(cable.i_phase_limit()), dtype=float)
 
             # Torque/power reporting
-            out["t_motor_em_nm"] = np.zeros_like(env_rpm, dtype=float)     # Kt*Iq
-            out["t_motor_use_nm"] = np.zeros_like(env_rpm, dtype=float)    # after τ_extra
-            out["t_gb_in_nm"] = np.zeros_like(env_rpm, dtype=float)        # after mag coupler cap
-            out["t_out_ftlbf"] = np.zeros_like(env_rpm, dtype=float)       # after gearbox + parasitics
+            out["t_motor_em_nm"] = np.zeros_like(env_rpm, dtype=float)  # Kt*Iq
+            out["t_motor_use_nm"] = np.zeros_like(env_rpm, dtype=float)  # after τ_extra
+            out["t_gb_in_nm"] = np.zeros_like(env_rpm, dtype=float)  # after mag coupler cap
+            out["t_out_ftlbf"] = np.zeros_like(env_rpm, dtype=float)  # after gearbox + parasitics
             out["p_out_w"] = np.zeros_like(env_rpm, dtype=float)
 
             G_local = float(self.params.gearbox.ratio())
@@ -5713,7 +5741,6 @@ class NavigatorVfWindow(QMainWindow):
             # Never block normal updates if the reference pane errors
             pass
 
-
         # Direction risk (only render when tab is visible)
         try:
             if hasattr(self, "dirrisk_pane") and (self.tabs.currentWidget() == self.dirrisk_pane):
@@ -5749,7 +5776,6 @@ class NavigatorVfWindow(QMainWindow):
         if self.chk_sweeps.isChecked() and self.chk_auto.isChecked() and (not self._bulk_updating):
             self.update_all()
 
-
     def _plot_motor_ops(self):
         """Render the Motor tab using cached envelope metrics (fast)."""
         if not hasattr(self, "motor_pane"):
@@ -5761,7 +5787,6 @@ class NavigatorVfWindow(QMainWindow):
             self.motor_pane.render(m1, m2, res_1, res_2, self.params)
         except Exception:
             pass
-
 
     def _plot_moog_curves(self):
         """Render the Moog Curves tab (vendor curves vs current τ_extra model)."""
@@ -5829,7 +5854,6 @@ class NavigatorVfWindow(QMainWindow):
             if (not enabled) and (self.tabs.currentIndex() == idx):
                 self.tabs.setCurrentIndex(0)
 
-
     def _state_widgets_for_defaults(self):
         """All widgets whose values should be restored by Reset."""
         ws = [
@@ -5849,7 +5873,8 @@ class NavigatorVfWindow(QMainWindow):
             # cable            self.sf_enable, self.sf_lf_mH, self.sf_rf_ohm, self.sf_cf_uF, self.sf_cap_conn, self.sf_damp_topo, self.sf_rd_ohm,
             # cable
             self.c_len, self.c_rpm, self.c_lpm, self.c_temp, self.c_wires, self.c_ilim_basis, self.c_ilim, self.c_lpar,
-            self.c_temp_ref, self.c_temp_alpha, self.c_temp_5seg, self.c_temp_derate, *getattr(self, "c_5seg_L", []), *getattr(self, "c_5seg_T", []),
+            self.c_temp_ref, self.c_temp_alpha, self.c_temp_5seg, self.c_temp_derate, *getattr(self, "c_5seg_L", []),
+            *getattr(self, "c_5seg_T", []),
             self.c_len_band,
             # motor
             getattr(self, "m_preset", None),
@@ -5879,7 +5904,6 @@ class NavigatorVfWindow(QMainWindow):
             self.combo_strategy,
         ]
         return [w for w in ws if w is not None]
-
 
     def _capture_ui_defaults(self):
         """Snapshot initial widget states so Reset restores *actual* defaults."""
@@ -6413,8 +6437,10 @@ class NavigatorVfWindow(QMainWindow):
         # Left-side status: keep it short (dashboard has the full dump)
         try:
             short = []
-            short.append("✅ PASS — UI target feasible" if res.feasible else "❌ FAIL — UI target infeasible (binding constraint hit)")
-            short.append(f"Cmd: {p.out_dir} {res.out_rpm_cmd:.3f} rpm   |   {quad}   |   P_out≈{_fmt(p_out_w / 1000.0, 3, ' kW')}")
+            short.append(
+                "✅ PASS — UI target feasible" if res.feasible else "❌ FAIL — UI target infeasible (binding constraint hit)")
+            short.append(
+                f"Cmd: {p.out_dir} {res.out_rpm_cmd:.3f} rpm   |   {quad}   |   P_out≈{_fmt(p_out_w / 1000.0, 3, ' kW')}")
             if dominant is not None:
                 dom_label, dom_margin, dom_used, dom_lim = dominant
                 dom_pct = _pct_used(dom_used, dom_lim)
@@ -6428,7 +6454,6 @@ class NavigatorVfWindow(QMainWindow):
             self.status.setText("\n".join(short))
         except Exception:
             self.status.setText(full_text)
-
 
     def _plot_envelope(self, res: SolveResult, env1, env2):
         (rpm1, tq1, iq1, loss1) = env1
@@ -6602,7 +6627,7 @@ class NavigatorVfWindow(QMainWindow):
 
         ax1.set_title("Output Torque Envelope (signed, CW=+, CCW=-)")
         ax1.set_xlabel("Output RPM")
-        #ax1.set_ylim(-1500,1500)
+        # ax1.set_ylim(-1500,1500)
         ax1.set_ylabel("Output Torque (ft-lbf)")
         ax1.grid(True, alpha=0.3)
         ax1.legend(fontsize=8, loc="best")
@@ -6916,7 +6941,6 @@ class NavigatorVfWindow(QMainWindow):
                 except Exception:
                     pass
 
-
             # --- Regen/braking caps (QII and QIV)
             if regen_ok:
                 c_use = cable_override if (cable_override is not None) else p.cable
@@ -6986,7 +7010,6 @@ class NavigatorVfWindow(QMainWindow):
             ax.scatter([rpm_tgt], [tq_tgt], s=55, marker='o')
             ax.annotate('Target', (rpm_tgt, tq_tgt), textcoords='offset points', xytext=(6, 6), fontsize=9)
 
-
         # Legends for the 4Q band plots (ax1/ax2)
         for ax in (self.band_pane.ax1, self.band_pane.ax2):
             handles, labels = ax.get_legend_handles_labels()
@@ -7009,7 +7032,7 @@ class NavigatorVfWindow(QMainWindow):
             ):
                 ax_u.set_title(title)
                 ax_u.text(0.5, 0.5, "Contact-block Vll limit is 0 / unset", ha="center", va="center",
-                         transform=ax_u.transAxes)
+                          transform=ax_u.transAxes)
                 ax_u.set_axis_off()
             self.band_pane.canvas.draw_idle()
             return
@@ -7117,8 +7140,10 @@ class NavigatorVfWindow(QMainWindow):
         imax2 = _imax_curve(r2, 2)
 
         # Also show current caps so it's clear where voltage dominates.
-        cab1 = CableParams(**vars(self.params.cable)); cab1.wires_per_phase = 1
-        cab2 = CableParams(**vars(self.params.cable)); cab2.wires_per_phase = 2
+        cab1 = CableParams(**vars(self.params.cable));
+        cab1.wires_per_phase = 1
+        cab2 = CableParams(**vars(self.params.cable));
+        cab2.wires_per_phase = 2
         i_cap1 = float(cab1.i_phase_limit())
         i_cap2 = float(cab2.i_phase_limit())
 
@@ -7149,7 +7174,6 @@ class NavigatorVfWindow(QMainWindow):
 
         self.band_pane.canvas.draw_idle()
 
-
     # -----------------------------
     # Sweep helper grids
     # -----------------------------
@@ -7178,10 +7202,10 @@ class NavigatorVfWindow(QMainWindow):
 
         # ---- Presets (ft-lbf) ----
         presets = [
-            ("Low (mild lateral)",      175.0,  50.0,  55.0, False, None),
-            ("Nominal (continuous)",    216.0, 158.0,  83.0, False, None),   # Stonehouse Scenario A
-            ("High (peak correction)",  216.0, 315.0, 250.0, False, None),   # Stonehouse Scenario B
-            ("Stall (mud motor stall)",   0.0,   0.0,   0.0, True,  945.0),  # Stonehouse Scenario C
+            ("Low (mild lateral)", 175.0, 50.0, 55.0, False, None),
+            ("Nominal (continuous)", 216.0, 158.0, 83.0, False, None),  # Stonehouse Scenario A
+            ("High (peak correction)", 216.0, 315.0, 250.0, False, None),  # Stonehouse Scenario B
+            ("Stall (mud motor stall)", 0.0, 0.0, 0.0, True, 945.0),  # Stonehouse Scenario C
         ]
 
         def _make_params(tob_ftlbf: float, bha_tc_ftlbf: float, gb_tc_ftlbf: float,
@@ -7351,8 +7375,10 @@ class NavigatorVfWindow(QMainWindow):
                 ax.set_ylabel("Output Torque (ft-lbf)")
             if xlabel:
                 ax.set_xlabel("Output RPM (signed, CW=+, CCW=-)")
+
         # Clear axes
-        for ax in (self.preset_pane.ax1, self.preset_pane.ax2, self.preset_pane.ax3, self.preset_pane.ax4, self.preset_pane.ax5):
+        for ax in (
+        self.preset_pane.ax1, self.preset_pane.ax2, self.preset_pane.ax3, self.preset_pane.ax4, self.preset_pane.ax5):
             ax.cla()
 
         # Build low/nom/high envelopes (each includes its own GB parasitic torque)
@@ -7361,11 +7387,11 @@ class NavigatorVfWindow(QMainWindow):
 
         p_low = _make_params(175.0, 50.0, 55.0, stuck=False)
         p_nom = _make_params(216.0, 158.0, 83.0, stuck=False)
-        p_hi  = _make_params(216.0, 315.0, 250.0, stuck=False)
+        p_hi = _make_params(216.0, 315.0, 250.0, stuck=False)
 
         m_low = SystemModel(p_low)
         m_nom = SystemModel(p_nom)
-        m_hi  = SystemModel(p_hi)
+        m_hi = SystemModel(p_hi)
 
         # --- Variability bands (same knobs as Band Plots) ---
         s_eta_lo, s_eta_hi = self._efficiency_torque_scalers()
@@ -7405,7 +7431,7 @@ class NavigatorVfWindow(QMainWindow):
             return {"lo": np.minimum(tq_lo, tq_hi), "hi": np.maximum(tq_lo, tq_hi)}
 
         def _torque_band_cable_len(model_ref: SystemModel, rpm_mag: np.ndarray,
-                                  cable_override: CableParams) -> Optional[dict]:
+                                   cable_override: CableParams) -> Optional[dict]:
             if not hasattr(self, "c_len_band"):
                 return None
             try:
@@ -7486,9 +7512,11 @@ class NavigatorVfWindow(QMainWindow):
 
         # Plot the 4Q band views
         _plot_4q_band(self.preset_pane.ax1, rpm_no_1, tq_no_1, tq_lo_1, tq_hi_1, m_nom, cab1,
-                      "Stonehouse presets band (1 wire/phase)", ylabel=True, xlabel=False, bands=bands_1, show_legend=True)
+                      "Stonehouse presets band (1 wire/phase)", ylabel=True, xlabel=False, bands=bands_1,
+                      show_legend=True)
         _plot_4q_band(self.preset_pane.ax2, rpm_no_2, tq_no_2, tq_lo_2, tq_hi_2, m_nom, cab2,
-                      "Stonehouse presets band (2 wires/phase)", ylabel=True, xlabel=True, bands=bands_2, show_legend=True)
+                      "Stonehouse presets band (2 wires/phase)", ylabel=True, xlabel=True, bands=bands_2,
+                      show_legend=True)
 
         # Compute & plot preset operating points (external-only requirement vs net envelope).
         # For consistency with compute_envelope() (which subtracts parasitics),
@@ -7496,13 +7524,13 @@ class NavigatorVfWindow(QMainWindow):
         markers = ['o', 's', '^', 'X']
         for i, (name, tob, bha_tc, gb_tc, stuck, stall_tq) in enumerate(presets):
             p_full = _make_params(tob, bha_tc, gb_tc, stuck=stuck, stall_tq_ftlbf=stall_tq)
-            p_req  = copy.deepcopy(p_full)
+            p_req = copy.deepcopy(p_full)
             if hasattr(p_req, "parasitic"):
                 p_req.parasitic.enabled = False
                 p_req.parasitic.tc_nm = 0.0
 
             m_full = SystemModel(p_full)
-            m_req  = SystemModel(p_req)
+            m_req = SystemModel(p_req)
 
             # Requirement (external-only) point
             res_req = m_req.solve_target(cable_override=cab1)
@@ -7534,15 +7562,15 @@ class NavigatorVfWindow(QMainWindow):
 
         try:
             ui_rpm = float(self.params.target.out_rpm) * s_dir
-            ui_tq  = float(self.params.target.out_torque_ftlbf) * s_dir
+            ui_tq = float(self.params.target.out_torque_ftlbf) * s_dir
         except Exception:
             ui_rpm, ui_tq = 0.0, 0.0
 
         for ax in (self.preset_pane.ax1, self.preset_pane.ax2):
             ax.scatter([ui_rpm], [ui_tq], s=95, marker="*", alpha=0.95, label="UI target")
-            #ax.scatter([ui_rpm], [0.0], s=40, marker="o", alpha=0.75, label="UI RPM")
+            # ax.scatter([ui_rpm], [0.0], s=40, marker="o", alpha=0.75, label="UI RPM")
             ax.annotate("UI target", (ui_rpm, ui_tq), textcoords="offset points", xytext=(6, -10), fontsize=8)
-            #ax.annotate("UI rpm", (ui_rpm, 0.0), textcoords="offset points", xytext=(6, 6), fontsize=8)
+            # ax.annotate("UI rpm", (ui_rpm, 0.0), textcoords="offset points", xytext=(6, 6), fontsize=8)
 
         # Legends
         for ax in (self.preset_pane.ax1, self.preset_pane.ax2):
@@ -7703,8 +7731,8 @@ class NavigatorVfWindow(QMainWindow):
                 return [label, s1, s2, reason], ("ok" if (ok1 and ok2) else "mixed" if (ok1 != ok2) else "bad")
 
             # UI row
-            #ui_r1 = self.model.solve_target(cable_override=cab1)
-            #ui_r2 = self.model.solve_target(cable_override=cab2)
+            # ui_r1 = self.model.solve_target(cable_override=cab1)
+            # ui_r2 = self.model.solve_target(cable_override=cab2)
 
             # UI target-point row (matches the star marker on the plots)
             def _point_feasible(
@@ -7762,7 +7790,7 @@ class NavigatorVfWindow(QMainWindow):
             feas_rows = []
             row_kinds = []
 
-            #row, kind = _feas_row("UI (current)", ui_r1, ui_r2)
+            # row, kind = _feas_row("UI (current)", ui_r1, ui_r2)
             row, kind = _feas_row_ui_target_point()
             feas_rows.append(row);
             row_kinds.append(kind)
@@ -7842,6 +7870,7 @@ class NavigatorVfWindow(QMainWindow):
             self.preset_pane.ax5.legend(fontsize=8, loc="best", framealpha=0.85)
 
             self.preset_pane.canvas.draw_idle()
+
     def _axis_max_abs_y(self, ax) -> float:
         """Return max(|y|) over common artists on an axes (lines, scatters, fills).
 
@@ -7977,9 +8006,9 @@ class NavigatorVfWindow(QMainWindow):
 
         # Stonehouse-style points (TOB, Tc) used for quick decision context
         presets = [
-            ("Low",     175.0,  50.0 + 55.0),
+            ("Low", 175.0, 50.0 + 55.0),
             ("Nominal", 216.0, 158.0 + 83.0),
-            ("High",    216.0, 315.0 + 250.0),
+            ("High", 216.0, 315.0 + 250.0),
         ]
 
         # Margin definition
@@ -7987,14 +8016,14 @@ class NavigatorVfWindow(QMainWindow):
 
         # What-if uncertainty (kept simple and explicit)
         tob_unc_pct = float(getattr(p, 'ccw_risk_tob_unc_pct', 0.25))
-        tc_unc_pct  = float(getattr(p, 'ccw_risk_tc_unc_pct', 0.50))
+        tc_unc_pct = float(getattr(p, 'ccw_risk_tc_unc_pct', 0.50))
         tob_unc_pct = float(np.clip(tob_unc_pct, 0.0, 1.0))
-        tc_unc_pct  = float(np.clip(tc_unc_pct,  0.0, 1.0))
+        tc_unc_pct = float(np.clip(tc_unc_pct, 0.0, 1.0))
 
         tob_lo = max(0.0, tob_ui * (1.0 - tob_unc_pct))
         tob_hi = max(tob_lo, tob_ui * (1.0 + tob_unc_pct))
-        tc_lo  = max(0.0, tc_ui  * (1.0 - tc_unc_pct))
-        tc_hi  = max(tc_lo, tc_ui  * (1.0 + tc_unc_pct))
+        tc_lo = max(0.0, tc_ui * (1.0 - tc_unc_pct))
+        tc_hi = max(tc_lo, tc_ui * (1.0 + tc_unc_pct))
 
         # Worst/best margin across the what-if window
         m_lo = tc_lo - tob_hi
@@ -8004,7 +8033,7 @@ class NavigatorVfWindow(QMainWindow):
         rng = np.random.default_rng(1234)
         N = 2400
         tob_s = rng.uniform(tob_lo, tob_hi, size=N)
-        tc_s  = rng.uniform(tc_lo,  tc_hi,  size=N)
+        tc_s = rng.uniform(tc_lo, tc_hi, size=N)
         m_s = tc_s - tob_s
 
         # Guardrail (engineering choice)
@@ -8061,13 +8090,13 @@ class NavigatorVfWindow(QMainWindow):
 
         axH.text(0.98, 0.98,
                  f"{badge_label}\n"
-                 f"P(m<{T_margin:.0f})={p_guard_fail*100:.0f}%   P(m<0)={p_brake*100:.0f}%",
+                 f"P(m<{T_margin:.0f})={p_guard_fail * 100:.0f}%   P(m<0)={p_brake * 100:.0f}%",
                  transform=axH.transAxes, ha='right', va='top', fontsize=12,
                  bbox=dict(boxstyle='round,pad=0.45', facecolor=badge_fc, alpha=0.95,
                            edgecolor=badge_ec, linewidth=1.2))
 
         axH.text(0.98, 0.82,
-                 f"what-if: TOB ±{tob_unc_pct*100:.0f}%, Tc ±{tc_unc_pct*100:.0f}%\n"
+                 f"what-if: TOB ±{tob_unc_pct * 100:.0f}%, Tc ±{tc_unc_pct * 100:.0f}%\n"
                  f"Guardrail: m ≥ {T_margin:.0f} ft-lbf",
                  transform=axH.transAxes, ha='right', va='top', fontsize=9,
                  bbox=dict(boxstyle='round', facecolor='white', alpha=0.88, edgecolor='0.75'))
@@ -8117,7 +8146,7 @@ class NavigatorVfWindow(QMainWindow):
                 return '#fee2e2'  # light red
             if v < T_margin:
                 return '#fef3c7'  # light yellow
-            return '#d1fae5'      # light green
+            return '#d1fae5'  # light green
 
         colors = [_bar_color(v) for v in vals]
         x_idx = np.arange(len(labels), dtype=float)
@@ -8154,12 +8183,11 @@ class NavigatorVfWindow(QMainWindow):
                  bbox=dict(boxstyle='round', facecolor='white', alpha=0.9, edgecolor='0.75'))
 
         axB.text(0.02, 0.06,
-                 f"UI what-if: TOB ±{tob_unc_pct*100:.0f}%, Tc ±{tc_unc_pct*100:.0f}%",
+                 f"UI what-if: TOB ±{tob_unc_pct * 100:.0f}%, Tc ±{tc_unc_pct * 100:.0f}%",
                  transform=axB.transAxes, ha='left', va='bottom', fontsize=9,
                  bbox=dict(boxstyle='round', facecolor='white', alpha=0.9, edgecolor='0.75'))
 
         pane.canvas.draw_idle()
-
 
     def _plot_tables(self):
 
@@ -8302,7 +8330,8 @@ class NavigatorVfWindow(QMainWindow):
                 v_motor = float(self.model.motor_voltage_required_phase_rms(motor_rpm, float(id_best), float(iq_max)))
                 v_drop = float(self.model.cable_drop_phase_rms(motor_rpm, float(iq_max), cab))
                 v_node = v_motor + v_drop
-                v_inv = float(self.model.inverter_voltage_required_phase_rms(motor_rpm, float(v_node), float(abs(iq_max))))
+                v_inv = float(
+                    self.model.inverter_voltage_required_phase_rms(motor_rpm, float(v_node), float(abs(iq_max))))
 
                 vll_motor[i] = math.sqrt(3.0) * v_motor
                 vll_inv_req[i] = math.sqrt(3.0) * v_inv
@@ -8361,8 +8390,10 @@ class NavigatorVfWindow(QMainWindow):
             return f"{nom:.0f}\n({lo:.0f}–{hi:.0f})"
 
         rows_tq = [
-            ["1 wire/phase"] + [_cell_tq(float(tq1[i]), float(tq1_lo[i]), float(tq1_hi[i])) for i in range(len(rpm_pts))],
-            ["2 wires/phase"] + [_cell_tq(float(tq2[i]), float(tq2_lo[i]), float(tq2_hi[i])) for i in range(len(rpm_pts))],
+            ["1 wire/phase"] + [_cell_tq(float(tq1[i]), float(tq1_lo[i]), float(tq1_hi[i])) for i in
+                                range(len(rpm_pts))],
+            ["2 wires/phase"] + [_cell_tq(float(tq2[i]), float(tq2_lo[i]), float(tq2_hi[i])) for i in
+                                 range(len(rpm_pts))],
         ]
 
         green = "#dcfce7"
@@ -8373,9 +8404,11 @@ class NavigatorVfWindow(QMainWindow):
         if target_tq > 0.0:
             for j in range(len(rpm_pts)):
                 # 1w row r=1, col=1+j
-                lo = float(tq1_lo[j]); hi = float(tq1_hi[j])
+                lo = float(tq1_lo[j]);
+                hi = float(tq1_hi[j])
                 cell_over_1[(1, 1 + j)] = (green if lo >= target_tq else (red if hi < target_tq else amber))
-                lo = float(tq2_lo[j]); hi = float(tq2_hi[j])
+                lo = float(tq2_lo[j]);
+                hi = float(tq2_hi[j])
                 cell_over_1[(2, 1 + j)] = (green if lo >= target_tq else (red if hi < target_tq else amber))
 
         subtitle1 = (
@@ -8402,7 +8435,9 @@ class NavigatorVfWindow(QMainWindow):
         # ---------- Table 2: Voltage + current ----------
         # Build rows: Iq (1w/2w), VLL motor (1w/2w), VLL inverter required (1w/2w), VLL command (surface), VLL downhole limit
         rows_v = []
-        def _fmt_arr(a, fmt): return [fmt(x) for x in a]
+
+        def _fmt_arr(a, fmt):
+            return [fmt(x) for x in a]
 
         rows_v.append(["Iq_max 1w (Arms)"] + _fmt_arr(iq1, lambda x: f"{float(x):.3f}"))
         rows_v.append(["Iq_max 2w (Arms)"] + _fmt_arr(iq2, lambda x: f"{float(x):.3f}"))
@@ -8411,7 +8446,8 @@ class NavigatorVfWindow(QMainWindow):
         rows_v.append(["VLL_inv_req 1w (Vrms)"] + _fmt_arr(vlli1, lambda x: f"{float(x):.0f}"))
         rows_v.append(["VLL_inv_req 2w (Vrms)"] + _fmt_arr(vlli2, lambda x: f"{float(x):.0f}"))
         rows_v.append(["VLL_cmd (surface) (Vrms)"] + _fmt_arr(vllc1, lambda x: f"{float(x):.0f}"))
-        rows_v.append(["VLL_downhole_eff (Vrms)"] + [("—" if vll_eff is None else f"{float(vll_eff):.0f}") for _ in rpm_pts])
+        rows_v.append(
+            ["VLL_downhole_eff (Vrms)"] + [("—" if vll_eff is None else f"{float(vll_eff):.0f}") for _ in rpm_pts])
 
         col_widths2 = [0.32] + [max(0.06, (1.0 - 0.32) / max(1, len(rpm_pts)))] * len(rpm_pts)
 
@@ -8454,7 +8490,8 @@ class NavigatorVfWindow(QMainWindow):
         rows_loss = [
             ["Loss 1w (W)"] + [f"{float(x):.0f}" for x in loss1],
             ["Loss 2w (W)"] + [f"{float(x):.0f}" for x in loss2],
-            ["2w/1w (%)"] + [("—" if float(loss1[i]) <= 1e-9 else f"{100.0*float(loss2[i])/float(loss1[i]):.1f}") for i in range(len(rpm_pts))],
+            ["2w/1w (%)"] + [("—" if float(loss1[i]) <= 1e-9 else f"{100.0 * float(loss2[i]) / float(loss1[i]):.1f}")
+                             for i in range(len(rpm_pts))],
         ]
         col_widths3 = [0.26] + [max(0.06, (1.0 - 0.26) / max(1, len(rpm_pts)))] * len(rpm_pts)
 
@@ -8522,9 +8559,6 @@ class NavigatorVfWindow(QMainWindow):
         )
 
         pane.canvas.draw_idle()
-
-
-
 
     def _linspace_safe(self, a: float, b: float, n: int) -> np.ndarray:
         """Return a monotonic linspace with sane bounds and at least 2 points."""
@@ -8644,7 +8678,9 @@ class NavigatorVfWindow(QMainWindow):
         # --- diagram blocks (left) ---
         blocks = [
             ("Surface\nInverter", f"{p.vf.modulation} | Vdc={p.vf.vdc_link_v:.0f} V", True),
-            ("Sine\nFilter", f"Lf={p.sine_filter.lf_h * 1e3:.2f} mH | Cf={p.sine_filter.cf_f * 1e6:.1f} µF ({p.sine_filter.cap_connection})", bool(p.sine_filter.enabled)),
+            ("Sine\nFilter",
+             f"Lf={p.sine_filter.lf_h * 1e3:.2f} mH | Cf={p.sine_filter.cf_f * 1e6:.1f} µF ({p.sine_filter.cap_connection})",
+             bool(p.sine_filter.enabled)),
             ("Heptacable\n(RL lumped)", f"L={p.cable.length_m / 1000:.1f} km | {p.cable.wires_per_phase} wire/phase",
              True),
             ("PMSM\nMotor", f"{p.motor.pole_pairs} pp | Kt={p.motor.kt_nm_per_arms:.2f} Nm/Arms", True),
@@ -8653,7 +8689,8 @@ class NavigatorVfWindow(QMainWindow):
              f"G={p.gearbox.ratio():.0f}:1 | η={p.gearbox.eff_total():.3f}\nParasitics: {'ON' if paras_on else 'OFF'}",
              True),
             (
-            "CCRS\nOutput", f"Cmd: {cmd_dir} | {op_mode}\nRPMcmd={0.0 if stuck_on else p.target.out_rpm:.2f}", True),
+                "CCRS\nOutput", f"Cmd: {cmd_dir} | {op_mode}\nRPMcmd={0.0 if stuck_on else p.target.out_rpm:.2f}",
+                True),
             ("BHA Load\n(External)",
              f"TOB={p.bha.drilling_tob_ftlbf:.0f} ft-lbf\nFric Tc={p.bha.fric_tc_nm:.0f} Nm", bha_on),
         ]
@@ -9581,7 +9618,6 @@ class NavigatorVfWindow(QMainWindow):
         self.sweep_limits.fig.tight_layout(pad=2.0)
         self.sweep_limits.canvas.draw_idle()
 
-
     def _plot_sweep_power_assessment(self):
         """Power-flow and loss assessment along the max-torque envelope (current config)."""
         if not hasattr(self, "sweep_power"):
@@ -9610,10 +9646,10 @@ class NavigatorVfWindow(QMainWindow):
 
         P_cable_w = np.zeros_like(out_rpms)
         P_mcu_w = np.zeros_like(out_rpms)
-        P_extra_w = np.zeros_like(out_rpms)     # core + viscous (modeled as opposing torque)
-        P_mag_w = np.zeros_like(out_rpms)       # magnetic-coupler slip (if enabled)
-        P_gear_w = np.zeros_like(out_rpms)      # gearbox loss from efficiency
-        P_par_w = np.zeros_like(out_rpms)       # parasitic output torque loss
+        P_extra_w = np.zeros_like(out_rpms)  # core + viscous (modeled as opposing torque)
+        P_mag_w = np.zeros_like(out_rpms)  # magnetic-coupler slip (if enabled)
+        P_gear_w = np.zeros_like(out_rpms)  # gearbox loss from efficiency
+        P_par_w = np.zeros_like(out_rpms)  # parasitic output torque loss
 
         eff_total = np.zeros_like(out_rpms)
 
@@ -9629,7 +9665,8 @@ class NavigatorVfWindow(QMainWindow):
 
             # Max feasible iq at this speed (respects control strategy + FW settings).
             if fast:
-                iq_max, id_best, i_mag, f_e, v_cmd, v_surf_lim, v_dh = self.model.max_iq_given_limits_fast(motor_rpm, cab)
+                iq_max, id_best, i_mag, f_e, v_cmd, v_surf_lim, v_dh = self.model.max_iq_given_limits_fast(motor_rpm,
+                                                                                                           cab)
             else:
                 iq_max, id_best, i_mag, f_e, v_cmd, v_surf_lim, v_dh = self.model.max_iq_given_limits(motor_rpm, cab)
 
@@ -9666,8 +9703,8 @@ class NavigatorVfWindow(QMainWindow):
 
             # --- Power bookkeeping (all real, fundamental only) ---
             # Electrical -> mechanical conversion at motor:
-            P_em = tau_em * abs(omega_m)                 # electromagnetic airgap power
-            P_extra = abs(tau_extra) * abs(omega_m)      # modeled motor internal mech loss
+            P_em = tau_em * abs(omega_m)  # electromagnetic airgap power
+            P_extra = abs(tau_extra) * abs(omega_m)  # modeled motor internal mech loss
             P_mag = max(0.0, (tau_useful - float(t_gb_in))) * abs(omega_m)  # coupler slip (if any)
 
             # Gearbox: P_out_raw = eta * P_gb_in ; loss = (1-eta)*P_gb_in
@@ -9719,7 +9756,7 @@ class NavigatorVfWindow(QMainWindow):
         ax1.set_ylabel("Power (kW)")
         ax1.legend(loc="best", frameon=False)
 
-                # (2) Loss breakdown (absolute) — stacked area (kW)
+        # (2) Loss breakdown (absolute) — stacked area (kW)
         loss_labels = [
             "Cable copper",
             "Motor copper",
@@ -9977,8 +10014,6 @@ class NavigatorVfWindow(QMainWindow):
     def _fmt_bool(x: bool) -> str:
         return "ON" if bool(x) else "OFF"
 
-
-
     # ---------- Plot export (PNG) ----------
     @staticmethod
     def _slugify(s: str, max_len: int = 90) -> str:
@@ -10170,6 +10205,7 @@ class NavigatorVfWindow(QMainWindow):
             "Plots saved",
             f"Saved {n_fig} figure(s) and {n_ax} subplot(s).\n\nOutput folder:\n{run_dir}\n\nFailures: {n_fail}",
         )
+
     def _generate_pdf_report(self):
         """Create a PDF report with all plots embedded + interpreted."""
         # Ensure plots and results are current
